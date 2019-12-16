@@ -22,7 +22,9 @@ export class HttpInterceptorService implements HttpInterceptor {
     return next.handle(request).pipe(tap((res: any) => {
       console.log(res)
       if (res.body && (req.method === 'POST' || req.method === 'PUT' || req.method === 'DELETE')) {
-        this.snackbar.open(res.body.message);
+        this.snackbar.open(res.body.message, 'Ok', {
+          duration:  5000
+        });
 
       }
     }));
