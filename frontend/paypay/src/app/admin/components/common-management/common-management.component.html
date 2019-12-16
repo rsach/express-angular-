@@ -8,7 +8,7 @@
     <div>
 
       <div class="flex flex-end" style="margin-bottom: 2vh">
-        <button mat-raised-button  (click)="onAddOrEdit()">Add Review</button>
+        <button mat-raised-button  (click)="onAddOrEdit()">Add {{type == 'employee' ? 'Employee' : 'Review'}}</button>
 
       </div>
       <mat-card style="padding: 3vh">
