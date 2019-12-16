@@ -23,6 +23,7 @@ services:
     tty: true
     volumes:
       - ./frontend/paypay:/app
+      - ./frontend/paypay/build1:/usr/share/nginx/html
     ports:
       - "80:80"
 

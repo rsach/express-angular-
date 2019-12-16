@@ -7,7 +7,7 @@ cd /app
 #rm -rf /var/www/html
 #
 #mkdir /var/www/html
-cp -rf build1/* /usr/share/nginx/html/
+#cp -rf build1/* /usr/share/nginx/html/
 
 set -eu
 
