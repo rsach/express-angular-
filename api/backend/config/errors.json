@@ -1,0 +1,87 @@
+{
+  "INVALID_REQUEST_DATA": {
+    "code": 1001,
+    "message": "bad_request",
+    "responseCode": 400
+  },
+  "NO_AUTH_HEADER": {
+    "code": 1002,
+    "message": "forbidden",
+    "responseCode": 403
+  },
+  "INVALID_AUTH_HEADER": {
+    "code": 1003,
+    "message": "invalid_auth_header",
+    "responseCode": 400
+  },
+  "ACCESS_TOKEN_EXPIRED": {
+    "code": 1004,
+    "message": "token_expired",
+    "responseCode": 401
+  },
+  "INVALID_ACCESS_TOKEN": {
+    "code": 1005,
+    "message": "invalid_access_token",
+    "responseCode": 401
+  },
+  "ACCOUNT_NOT_ACTIVE": {
+    "code": 1006,
+    "message": "account_not_active",
+    "responseCode": 401
+  },
+  "EMAIL_ADDRESS_IN_USE": {
+    "code": 1007,
+    "message": "email_address_in_use",
+    "responseCode": 400
+  },
+  "INVALID_CREDENTIALS": {
+    "code": 1008,
+    "message": "wrong_credentials",
+    "responseCode": 400
+  },
+  "EMAIL_NOT_VERIFIED": {
+    "code": 1009,
+    "message": "email_not_verified",
+    "responseCode": 400
+  },
+  "INVALID_USER_ID": {
+    "code": 1010,
+    "message": "invalid_user_id",
+    "responseCode": 400
+  },
+  "INVALID_ID": {
+    "code": 1011,
+    "message": "invalid_id",
+    "responseCode": 404
+  },
+  "INVALID_CURRENT_PASSWORD": {
+    "code": 1012,
+    "message": "invalid_current_password",
+    "responseCode": 400
+  },
+  "PAYMENT_PENDING": {
+    "code": 1014,
+    "message": "payment_pending",
+    "responseCode": 402
+  },
+  "T&C_PENDING": {
+    "code": 1015,
+    "message": "t_n_c missing",
+    "responseCode": 412
+  },
+  "FILE_NOT_FOUND": {
+    "code": 1079,
+    "message": "file not found",
+    "responseCode": 404
+  },
+  "FORBIDDEN": {
+    "code": 1080,
+    "message": "forbidden",
+    "responseCode": 403
+  },
+  "TOKEN_ALREADY_USED": {
+    "code": 1081,
+    "message": "Link already used",
+    "responseCode": 405
+  }
+}

@@ -1,0 +1,77 @@
+
+
+
+<div class="flex flex-center  flex-column" style="height: 98vh">
+
+  <div class="flex flex-center">
+
+    <div>
+
+      <div class="flex flex-end" style="margin-bottom: 2vh">
+        <button mat-raised-button  (click)="onAddOrEdit()">Add Review</button>
+
+      </div>
+      <mat-card style="padding: 3vh">
+
+            <div *ngIf="type == 'employee'" class="flex" style="margin-bottom: 2vh">
+              <div class="flex-6" style="font-weight: 500; font-size: 2vh">Name</div>
+              <div class="flex-6" style="font-weight: 500; font-size: 2vh"  >Actions</div>
+            </div>
+
+            <div *ngIf="type == 'feedback'" class="flex" style="margin-bottom: 2vh">
+              <div class="flex-3" style="font-weight: 500; font-size: 2vh">Review Of</div>
+<!--              <div class="flex-3" style="font-weight: 500; font-size: 2vh"  >Review From</div>-->
+              <div class="flex-3" style="font-weight: 500; font-size: 2vh"  >Review</div>
+              <div class="flex-3" style="font-weight: 500; font-size: 2vh"  >Action</div>
+            </div>
+
+            <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+              <div *cdkVirtualFor="let employee of employees" class="example-item">
+
+
+                <div *ngIf="type == 'employee'" class="flex" style="height: 100%">
+                  <div class="flex-6" style="font-size: 2vh">{{employee?.name}}</div>
+                  <div class="flex-6" style="font-size: 2vh">
+                    <button mat-icon-button (click)="onAddOrEdit(employee)">
+                      <mat-icon aria-hidden="false" aria-label="Example home icon" >edit</mat-icon>
+
+                    </button>
+                    <button mat-icon-button (click)="onDelete(employee)">
+                      <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+
+                    </button>
+
+                  </div>
+                </div>
+
+                <div *ngIf="type == 'feedback'" class="flex" style="margin-bottom: 2vh">
+                  <div class="flex-3" style="font-weight: 500; font-size: 2vh">{{employee?.reviewOf?.name}}</div>
+<!--                  <div class="flex-3" style="font-weight: 500; font-size: 2vh">{{employee?.reviewFrom?.name}}</div>-->
+                  <div class="flex-3" style="font-weight: 500; font-size: 2vh"  >{{employee?.review}}</div>
+                  <div class="flex-3" style="font-size: 2vh">
+                    <button mat-icon-button (click)="onAddOrEdit(employee)">
+                      <mat-icon aria-hidden="false" aria-label="Example home icon" >edit</mat-icon>
+
+                    </button>
+
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </cdk-virtual-scroll-viewport>
+
+
+      </mat-card>
+  </div>
+
+
+</div>
+
+
+</div>
+
+
+

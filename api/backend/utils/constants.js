@@ -1,0 +1,7 @@
+export default {
+  DEFAULT_TOKEN_BEARER: 'Bearer',
+  STATUS_ACTIVE: 1,
+  STATUS_INACTIVE: 0,
+  STATUS_BLOCKED: 2,
+
+};

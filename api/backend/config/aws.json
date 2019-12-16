@@ -1,0 +1,9 @@
+{
+  "accessKeyId": "",
+  "secretAccessKey": "",
+  "region": "eu-west-2",
+  "development_label_bucket_name": "paypay",
+  "test_label_bucket_name": "paypay",
+  "production_label_bucket_name": "paypay",
+  "signatureVersion": "v4"
+}

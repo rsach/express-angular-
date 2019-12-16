@@ -1,0 +1,47 @@
+
+
+
+<div class="flex flex-center  flex-column" style="height: 98vh">
+
+  <div class="flex flex-center">
+
+    <div>
+
+      <div class="flex flex-end" style="margin-bottom: 2vh">
+
+
+      </div>
+      <mat-card style="padding: 3vh">
+
+        <div class="flex" style="margin-bottom: 2vh">
+          <div class="flex-6" style="font-weight: 500; font-size: 2vh">Name</div>
+          <div class="flex-6" style="font-weight: 500; font-size: 2vh"  >Assign To</div>
+        </div>
+
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+          <div *cdkVirtualFor="let employee of employees" class="example-item">
+            <div class="flex" style="height: 100%">
+              <div class="flex-6" style="font-size: 2vh">{{employee?.name}}</div>
+              <div class="flex-6" style="font-size: 2vh">
+                <select style="height: inherit; font-size: 2vh" (change)="onAssign($event.target.value, employee.id)">
+                  <option selected disabled>Select</option>
+                  <option *ngFor="let i of employees | filter: employee.id" [value]="i.id"> {{i?.name}}</option>
+                </select>
+
+              </div>
+            </div>
+          </div>
+        </cdk-virtual-scroll-viewport>
+
+
+      </mat-card>
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+

@@ -1,0 +1,31 @@
+
+<div>
+  <div>
+
+
+    <mat-form-field *ngIf="data.type == 'employee'" class="example-full-width">
+      <input matInput placeholder="Name" [(ngModel)]="body.name">
+      <mat-hint *ngIf="!body.name?.trim()">Enter a name</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="data.type == 'feedback'" class="example-full-width">
+      <input matInput placeholder="Feedback" [(ngModel)]="body.review">
+      <mat-hint *ngIf="!body.name?.trim()">Enter a feedback</mat-hint>
+    </mat-form-field>
+
+    <div>
+      <select *ngIf="data.type == 'feedback'" style="font-size: 2vh" [(ngModel)]="body.review_of">
+        <option selected disabled>Select</option>
+        <option *ngFor="let i of data.emp" [value]="i?.id">{{i?.name}}</option>
+      </select>
+    </div>
+
+
+    <div class="flex flex-space-around">
+      <button (click)="onCancel()" type="button" mat-raised-button>Cancel</button>
+      <button (click)="onSubmit()"  type="button" mat-raised-button>Submit</button>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+.flex {
+  display: flex;
+}
+
+.flex-6 {
+  flex-basis: 50%;
+}
+
+.flex-3 {
+  flex-basis: 33%;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-space-around {
+  justify-content: space-around;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.example-viewport {
+  height: 50vh;
+  width: 30vw;
+  //border: 1px solid black;
+}
+
+.example-item {
+  height: 5vh;
+}

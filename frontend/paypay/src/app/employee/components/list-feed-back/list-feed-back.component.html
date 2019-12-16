@@ -1,0 +1,48 @@
+
+
+
+<div class="flex flex-center  flex-column" style="height: 98vh">
+
+  <div class="flex flex-center">
+
+    <div>
+
+      <div class="flex flex-end" style="margin-bottom: 2vh">
+
+
+      </div>
+      <mat-card style="padding: 3vh">
+
+        <div class="flex" style="margin-bottom: 2vh">
+          <div class="flex-6" style="font-weight: 500; font-size: 2vh">Review Of</div>
+          <div class="flex-6" style="font-weight: 500; font-size: 2vh"  >Actions</div>
+        </div>
+
+        <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+          <div *cdkVirtualFor="let employee of reviews" class="example-item">
+            <div class="flex" style="height: 100%">
+              <div class="flex-6" style="font-size: 2vh">{{employee?.reviewOf?.name}}</div>
+              <div class="flex-6" style="font-size: 2vh">
+                <button mat-raised-button (click)="writeFeedBack(employee)">Write Feedback
+
+                </button>
+
+
+
+              </div>
+            </div>
+          </div>
+        </cdk-virtual-scroll-viewport>
+
+
+      </mat-card>
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+

@@ -1,0 +1,41 @@
+{
+  "development": {
+    "username": "paypay",
+    "password": "123",
+    "database": "paypay",
+    "host": "db",
+    "port": "3306",
+    "dialect": "mysql",
+    "migrationStorage": "json",
+    "migrationStoragePath": "sequelizeMigrations.json",
+    "dialectOptions": {
+      "multipleStatements": true
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": "159AC04FABC69F65DE4D",
+    "database": "paypay",
+    "host": "db",
+    "port": "3306",
+    "dialect": "mysql",
+    "migrationStorage": "json",
+    "migrationStoragePath": "sequelizeMigrations.json",
+    "dialectOptions": {
+      "multipleStatements": true
+    }
+  },
+  "production": {
+    "username": "paypay",
+    "password": null,
+    "database": "paypay",
+    "host": "db",
+    "port": "3306",
+    "dialect": "mysql",
+    "migrationStorage": "json",
+    "migrationStoragePath": "sequelizeMigrations.json",
+    "dialectOptions": {
+      "multipleStatements": true
+    }
+  }
+}

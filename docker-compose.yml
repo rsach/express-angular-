@@ -1,0 +1,32 @@
+version: '2'
+services:
+  backend:
+    build: ./api
+    ports:
+     - "9000:9000"
+    depends_on:
+     - db
+    environment:
+     - DATABASE_HOST=db
+    volumes:
+     - ./api/backend:/app/api
+  db:
+    build: ./database
+#    ports:
+#      - "3306:33060"
+  ui1:
+    build: ./frontend
+    depends_on:
+      - backend
+    environment:
+      - API_HOST=backend
+    tty: true
+    volumes:
+      - ./frontend/paypay:/app
+    ports:
+      - "80:80"
+
+
+
+
+
