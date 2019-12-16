@@ -17,7 +17,7 @@ export class HttpInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
     const request = req.clone({
-      url: `${environment.url}${req.url}`
+      url: `${environment.url}/${req.url}`
     });
     return next.handle(request).pipe(tap((res: any) => {
       console.log(res)
