@@ -19,7 +19,7 @@
     "download-file": "^0.1.5",
     "ejs": "^2.5.7",
     "email-templates": "^3.1.5",
-    "express": "4.15.4",
+    "express": "4.17.3",
     "express-validator": "3.2.1",
     "express-winston": "^2.4.0",
     "i18n": "0.8.3",
